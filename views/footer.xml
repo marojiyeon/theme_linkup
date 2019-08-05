@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_footer" inherit_id="website.footer_custom" name="Custom Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <footer class="site-footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="footer-ul footer-menu">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul class="social-link">
+                                    <li class="facebook"><a target="_blank" t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="twitter"><a target="_blank" t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="googleplus"><a target="_blank" t-att-href="website.social_googleplus" t-if="website.social_googleplus"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="linkedin"><a target="_blank" t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="youtube"><a target="_blank" t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="logo" href="/">
+                                    <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+                                </a>
+                                <div class="about-text"></div>
+                            </div>
+                            <div class="col">
+                                <h6 class="footer-title">Contact Info</h6>
+                                <ul class="footer-ul contact-info">
+                                    <li><i class="fa fa-map-marker"></i> <span t-field="res_company.street"/> <span t-field="res_company.city"/>
+                                        <span t-field="res_company.country_id"/></li>
+                                    <li><i class="fa fa-phone"></i> <span t-field="res_company.phone"></span></li>
+                                    <li><i class="fa fa-envelope-o"></i> <span t-field="res_company.email"></span></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <h6 class="footer-title">Usefull Link</h6>
+                                <ul class="footer-ul footer-menu">
+                                    <li><a href="#">Create Account</a></li>
+                                    <li><a href="#">Faq</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>
